@@ -1,0 +1,10 @@
+<%- include("./partials/head.ejs") %>
+
+<ul>
+  <% for (const flower of flowers) { %>
+  <li><a href="/fleurs/<%= flower %>"><%= flower %></a></li>
+  <% } %> <% if(locals.getFlower) { %>
+  <p>Vous avez choisi la fleur : <%= locals.getFlower %> !</p>
+  <% } %>
+</ul>
+<%- include("./partials/foot.ejs") %>
